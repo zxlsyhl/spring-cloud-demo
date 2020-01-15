@@ -1,0 +1,15 @@
+server:
+  port: 3333
+spring:
+  application:
+    name: ribbon-client1
+  zipkin:
+    base-url: http://sleuth-server
+    enabled: true
+  sleuth:
+    sampler:
+      probability: 1
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

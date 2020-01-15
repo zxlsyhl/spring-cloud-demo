@@ -1,0 +1,15 @@
+### 服务端口号
+server:
+  port: 8200
+###eureka 基本信息配置
+spring:
+  application:
+    name: eureka-server
+eureka:
+  instance:
+    hostname: peer1
+  client:
+#    register-with-eureka: true
+#    fetch-registry: true
+    service-url:
+      defaultZone: http://peer2:8100/eureka/

@@ -1,0 +1,41 @@
+server:
+  port: 3333
+spring:
+  application:
+    name: ribbon-client1
+#  cloud:
+#    loadbalancer:
+#      retry:
+#        enabled: true  #开启重试，高版本的默认开启
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:8200/eureka,http://peer2:8100/eureka
+
+#需要重试的服务
+feign-client:
+  ribbon:
+    ReadTimeout: 2000  #请求处理时间
+    ConnectTimeout: 1000  #请求连接时间
+    MaxAutoRetries: 3  #对当前实例的重试次数
+    MaxAutoRetriesNextServer: 1 #切换实例的重试次数
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule #指明负载均衡实现类
+
+#取消Ribbon使用Eureka #配置Ribbon能访问 的微服务节点，多个节点用逗号隔开
+#ribbon:
+#  eureka:
+#    enabled: false
+#feign-client:
+#  ribbon:
+#    listOfServers: localhost:8001，localhost:8002
+
+#熔断配置
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: true  #执行是否有超时限制
+        isolation:
+          thread:
+            timeoutInMilliseconds: 8000  #断路器的超时时间需要大于Ribbon的超时时间，不然不会触发重试。
