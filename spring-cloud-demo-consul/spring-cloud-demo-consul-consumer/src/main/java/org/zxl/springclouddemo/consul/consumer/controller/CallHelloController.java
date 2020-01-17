@@ -6,6 +6,9 @@ import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
+import org.zxl.springclouddemo.consul.consumer.service.HelloService;
+
+import javax.annotation.Resource;
 
 @RestController
 public class CallHelloController {
@@ -21,4 +24,17 @@ public class CallHelloController {
         System.out.println(result);
         return result;
     }
+
+    /**
+     * 通过feign调用
+     */
+//    @Autowired
+    @Resource
+    private HelloService helloService;
+
+    @GetMapping("/call2")
+    public String call2(){
+        return helloService.hello();
+    }
+
 }

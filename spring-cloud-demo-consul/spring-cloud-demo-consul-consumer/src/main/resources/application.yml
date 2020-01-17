@@ -9,3 +9,14 @@ spring:
         register: false  #设置不需要注册到consul
 server:
   port: 8124
+
+#feign 配置
+#feign:
+#  hystrix:
+#    enabled: true
+#  client:
+#    config:
+#      default:
+#        connectTimeout: 5000
+#        readTimeout: 5000
+#        loggerLevel: full

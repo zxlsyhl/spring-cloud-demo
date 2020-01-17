@@ -34,4 +34,5 @@ public class ServiceController {
         return loadBalancerClient.choose("service-producer").getUri().toString();
     }
 
+
 }
