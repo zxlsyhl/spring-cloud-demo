@@ -10,6 +10,7 @@
         <module>spring-cloud-demo-gateway</module>
         <module>spring-cloud-demo-sleuth</module>
         <module>spring-cloud-demo-consul</module>
+        <module>spring-cloud-demo-zookeeper</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

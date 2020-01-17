@@ -1,0 +1,17 @@
+server:
+  port: 8125
+
+spring:
+  application:
+    name: zookeeper-producer
+  cloud:
+    zookeeper:
+      connect-string: localhost:2181,localhost:2182,localhost:2183
+#      discovery:
+##        root: config  #配置根路径
+#        register: true
+#        instance-host: localhost
+#        instance-port: ${server.port}
+#        enabled: true  #使用zookeeper作为配置中心
+
+
