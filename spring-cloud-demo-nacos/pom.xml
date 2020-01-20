@@ -12,17 +12,12 @@
 
     <artifactId>spring-cloud-demo-nacos</artifactId>
     <packaging>pom</packaging>
-    <groupId>org.zxl</groupId>
-    <version>1.0-SNAPSHOT</version>
     <modules>
         <module>spring-cloud-demo-nacos-producer</module>
         <module>spring-cloud-demo-nacos-consumer</module>
         <module>spring-cloud-demo-nacos-config</module>
     </modules>
 
-    <properties>
-        <spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
-    </properties>
 
     <!--<dependencyManagement>-->
     <!--<dependencies>-->

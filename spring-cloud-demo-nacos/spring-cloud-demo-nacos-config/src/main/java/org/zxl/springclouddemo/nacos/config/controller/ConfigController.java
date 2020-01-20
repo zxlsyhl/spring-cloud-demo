@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RefreshScope
 public class ConfigController {
-    @Value("${maxId}")
+    @Value("${maxId:10}")
     private String maxId;
 
     @Value("${bigId:111}")
