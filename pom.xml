@@ -11,6 +11,7 @@
         <module>spring-cloud-demo-sleuth</module>
         <module>spring-cloud-demo-consul</module>
         <module>spring-cloud-demo-zookeeper</module>
+        <module>spring-cloud-demo-nacos</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

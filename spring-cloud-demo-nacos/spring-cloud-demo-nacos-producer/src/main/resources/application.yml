@@ -1,0 +1,9 @@
+server:
+  port: 8127
+spring:
+  application:
+    name: nacos-producer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
