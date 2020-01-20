@@ -1,0 +1,9 @@
+server:
+  port: 8126
+
+spring:
+  application:
+    name: zookeeper-consumer
+  cloud:
+    zookeeper:
+      connect-string: localhost:2181,localhost:2182,localhost:2183

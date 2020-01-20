@@ -40,4 +40,10 @@ public class ZkController {
 
         return "Hello," + name;
     }
+
+
+    @GetMapping("/hello")
+    public String hello(){
+        return "hello i am zookeeper producers";
+    }
 }
