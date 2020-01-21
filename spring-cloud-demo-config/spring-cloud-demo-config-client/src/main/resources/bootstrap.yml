@@ -6,5 +6,15 @@ spring:
       uri: http://localhost:7001/        #Config server的uri
       profile: dev                       #指定的环境，profile
       label: master                      #指定分支
+  rabbitmq:
+    host: localhost
+    port: 5762
+    username: guest
+    password: guest
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"  #暴露所有端点
 server:
   port: 8000
