@@ -21,6 +21,7 @@
     <modules>
         <module>spring-cloud-demo-zookeeper-producer</module>
         <module>spring-cloud-demo-zookeeper-consumer</module>
+        <module>spring-cloud-demo-zookeeper-config</module>
     </modules>
 
     <dependencyManagement>
